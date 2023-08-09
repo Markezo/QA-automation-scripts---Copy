@@ -1,13 +1,13 @@
 const fetch = require('node-fetch').default;
 const ENDPOINT = "public/v2/users/";
-
+const base = 'https://gorest.co.in/'
 export async function makeApiCall(
  // apiUrl: string | undefined,
   method: string,
   data?: any,
   userID?: any
 ) {
-  let url = `${process.env.API_URL}${ENDPOINT}`;
+  let url = `${base}${ENDPOINT}`;
   if (userID !== undefined) {
     url += userID;
   }
