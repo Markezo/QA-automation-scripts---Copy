@@ -7,27 +7,28 @@ import {
   putRequest,
 } from "../../fixtures/apiConfig";
 
+
 test.describe.serial("API calls", () => {
   let id: number;
 
 
-  test("Create User", async ({ baseURL }) => {
-    const response = await postRequest(baseURL);
+  test("Create User", async ({ }) => {
+    const response = await postRequest();
     let user= await response.json();
     id = user.id;
   });
 
-  test("Update User", async ({ baseURL }) => {
-    putRequest(baseURL, id);
+  test("Update User", async ({  }) => {
+    putRequest(id);
   });
 
 
-  test("Get User By ID", async ({ baseURL }) => {
-    getRequest(baseURL, id);
+  test("Get User By ID", async ({  }) => {
+    getRequest(id);
   });
 
-  test("Delete User", async ({ baseURL }) => {
-    const response =  await deleteRequest(baseURL, id);
-    const getUserResponse = await getRequestAfterDelete(baseURL, id);
+  test("Delete User", async ({  }) => {
+    const response =  await deleteRequest(id);
+    const getUserResponse = await getRequestAfterDelete(id);
   });
 });
