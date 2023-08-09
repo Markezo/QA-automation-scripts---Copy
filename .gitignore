@@ -1,0 +1,9 @@
+.env
+node_modules/
+reports/*
+playwright.config.ts
+/test-results/
+/playwright-report/
+/playwright/.cache/
+
+playwright/.auth
