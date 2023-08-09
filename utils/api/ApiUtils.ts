@@ -1,5 +1,4 @@
-import fetch from 'node-fetch';
-
+const fetch = require('node-fetch').default;
 const ENDPOINT = "public/v2/users/";
 
 export async function makeApiCall(
