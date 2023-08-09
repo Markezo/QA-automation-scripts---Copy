@@ -13,7 +13,7 @@ test.describe.serial("API calls", () => {
 
   test("Create User", async ({ baseURL }) => {
     const response = await postRequest(baseURL);
-    const user = await response.json();
+    let user: any= await response.json();
     id = user.id;
   });
 
