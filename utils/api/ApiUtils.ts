@@ -2,12 +2,12 @@ const fetch = require('node-fetch').default;
 const ENDPOINT = "public/v2/users/";
 
 export async function makeApiCall(
-  baseURL: string | undefined,
+ // apiUrl: string | undefined,
   method: string,
   data?: any,
   userID?: any
 ) {
-  let url = `${baseURL}${ENDPOINT}`;
+  let url = `${process.env.API_URL}${ENDPOINT}`;
   if (userID !== undefined) {
     url += userID;
   }
