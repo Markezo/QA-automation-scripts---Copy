@@ -16,7 +16,7 @@ export async function makeApiCall(
     method,
     headers: {
       Accept: "application/json",
-      Authorization: `Bearer ${process.env.TOKEN}`,
+      Authorization: `Bearer 2f96fe44f0c6076e1079f144bc127a733b319f6961cc76320a44475fc39b35a9`,
       "Content-Type": "application/json",
     },
     body: JSON.stringify(data),
