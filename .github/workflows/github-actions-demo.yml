@@ -18,6 +18,12 @@ jobs:
         with:
           node-version: 14
 
+
+      - name: Set environment variables
+        run: |
+          echo "API_TOKEN=2f96fe44f0c6076e1079f144bc127a733b319f6961cc76320a44475fc39b35a9" >> $GITHUB_ENV
+          echo "API_BASE_URL=https://gorest.co.in/" >> $GITHUB_ENV
+
       - name: Install dependencies
         run: npm install
 
